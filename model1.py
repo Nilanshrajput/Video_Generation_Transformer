@@ -2,6 +2,20 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 keras = tf.keras
 
+
+def load(image_file):
+  image = tf.io.read_file(image_file)
+  image = tf.image.decode_jpeg(image)
+
+  w = tf.shape(image)[1]
+
+  w = w // 2
+  input_image = image[:, w:, :]
+
+  input_image = tf.cast(input_image, tf.float32)  
+  return input_image
+
+
 def resize(input_image, height, width):
     input_image = tf.image.resize(input_image, [height, width],
                                 method=tf.image.ResizeMethod.NEAREST_NEIGHBOR)
@@ -38,3 +52,7 @@ def encoder_trans(img):
     feats=model.predict(img)
 
     return feats
+
+
+img=load("img.jpg")
+feats= encoder_trans(img)
