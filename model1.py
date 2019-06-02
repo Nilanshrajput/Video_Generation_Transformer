@@ -31,7 +31,7 @@ def preprocess_imgs(input_image):
     size=256
     input_image=resize(input,size,size)
     input_image = np.expand_dims(input_image, axis=0)
-    input_image = keras.applications.ResNet50.preprocess_inputpreprocess_input(x)
+    input_image = keras.applications.ResNet50.preprocess_input(x)
 
     return input_image
 
