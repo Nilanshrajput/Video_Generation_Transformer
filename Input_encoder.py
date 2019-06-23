@@ -1,7 +1,7 @@
 import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 keras = tf.keras
-
+from keras.models import Model
 
 def load(image_file):
   image = tf.io.read_file(image_file)
