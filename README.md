@@ -3,5 +3,5 @@
  
  Work in progress
  
- Mdoel 1 protoptype is done , yet to train (GPU limitaion)
+ Mdoel 1 prototype is done , yet to train (GPU limitaion)
  - make model smaller
