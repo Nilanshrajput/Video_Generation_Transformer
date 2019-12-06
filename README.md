@@ -5,3 +5,4 @@
  
  Mdoel 1 prototype is done , yet to train (GPU limitaion)
  - make model smaller
+ - modified Singan(ICCV 2019) to work on batches of images.
